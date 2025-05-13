@@ -14,16 +14,20 @@ public class Pelicula extends ContenidoMultimedia implements ContenidoDescargabl
 
     // Implementamos los metodos de la interface
     @Override
-    public String descargar() { //Preguntar por que el "public" no se puede quitar
+    public double descargar() {
         if (resolucion==ResolucionType._4K) {
-            return 5000+ " MB";
+            return 5000;
         }else{
-            return 2000 + " MB";
+            return 2000;
         }
     }
 
     @Override
-    public int verificarEspacioRequerido() { //Preguntar sobre esto
-        return 0;
+    public boolean verificarEspacioRequerido(double espacioDisponible) { //Preguntar sobre esto
+        if (espacioDisponible>descargar()) {
+            return true;
+        }else{
+            return false;
+        }
     }
 }

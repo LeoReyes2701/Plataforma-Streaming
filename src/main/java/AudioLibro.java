@@ -1,7 +1,7 @@
 public class AudioLibro extends ContenidoMultimedia implements ContenidoDescargable {
     // Declaramos atributos adicionales
     private String narrador;
-    private String tamanoMB;
+    private double tamanoMB;
 
     @Override
     double calcularPuntuacion() {
@@ -9,12 +9,16 @@ public class AudioLibro extends ContenidoMultimedia implements ContenidoDescarga
     }
 
     @Override
-    public String descargar() {
-        return tamanoMB + " MB";
+    public double descargar() {
+        return tamanoMB;
     }
 
     @Override //Preguntar como usar esto que se pone aca
-    public int verificarEspacioRequerido() {
-        return 0;
+    public boolean verificarEspacioRequerido(double espacioDisponible) {
+        if (espacioDisponible>descargar()) {
+            return true;
+        }else{
+            return false;
+        }
     }
 }

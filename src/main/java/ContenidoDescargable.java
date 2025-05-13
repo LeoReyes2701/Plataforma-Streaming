@@ -1,6 +1,6 @@
 public interface ContenidoDescargable {
-    String descargar(); // Retorna el tamaño del contenido en MB
-    int verificarEspacioRequerido(); //Verifica si hay suficiente espacio para la descarga; lanza una excepción si no lo hay
+    double descargar(); // Retorna el tamaño del contenido en MB
+    boolean verificarEspacioRequerido(double espacioDisponible); //Verifica si hay suficiente espacio para la descarga; lanza una excepción si no lo hay
 
 }
 
