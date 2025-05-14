@@ -13,7 +13,7 @@ public class AudioLibro extends ContenidoMultimedia implements ContenidoDescarga
         return tamanoMB;
     }
 
-    @Override //Preguntar como usar esto que se pone aca
+    @Override //Preguntar como usar esto que se pone acaa
     public boolean verificarEspacioRequerido(double espacioDisponible) {
         if (espacioDisponible>descargar()) {
             return true;

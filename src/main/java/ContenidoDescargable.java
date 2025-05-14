@@ -4,4 +4,4 @@ public interface ContenidoDescargable {
 
 }
 
-// Solo peliculas y audiolibros implementan esta interface
+// Solo peliculas y audiolibros implementan esta interfacee

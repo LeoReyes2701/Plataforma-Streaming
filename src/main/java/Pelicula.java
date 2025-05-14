@@ -12,7 +12,7 @@ public class Pelicula extends ContenidoMultimedia implements ContenidoDescargabl
         }
     }
 
-    // Implementamos los metodos de la interface
+    // Implementamos los metodos de la interfacee
     @Override
     public double descargar() {
         if (resolucion==ResolucionType._4K) {

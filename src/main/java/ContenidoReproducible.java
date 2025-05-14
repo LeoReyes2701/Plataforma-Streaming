@@ -8,4 +8,4 @@ public interface ContenidoReproducible {
     boolean esFavorito();
 }
 
-// Todos los tipos de contenido deben implementar esta interfaz.
+// Todos los tipos de contenido deben implementar esta interfaz..

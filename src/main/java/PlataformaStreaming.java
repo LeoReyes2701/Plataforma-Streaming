@@ -76,5 +76,5 @@ public class PlataformaStreaming {
         }
     }
 
-    // Preguntar porque me pone el nombre del archivo en rojo
+    // Preguntar porque me pone el nombre del archivo en rojoo
 

@@ -6,7 +6,7 @@ public abstract class ContenidoMultimedia implements ContenidoReproducible{
     private int vecesReproducido;
     private boolean esFavorito;  //Indica si está en la lista de favoritos de algún usuario
 
-    // Declaramos el metoodo abstracto
+    // Declaramos el metoodo abstractoo
     abstract double calcularPuntuacion();
 
     // Implementamos un metodo protegido-----------PREGUNTAR QUE VA ACA!!!!!!!

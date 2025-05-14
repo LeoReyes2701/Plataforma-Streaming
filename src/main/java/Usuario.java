@@ -5,7 +5,7 @@ public class Usuario  {
     private double espacioDisponible;
     private List<ContenidoReproducible> listaFavoritos;
 
-    // Implementamos los metodos particulares de usuarios
+    // Implementamos los metodos particulares de usuarioss
     public void  agregarFavorito(ContenidoReproducible contenidoReproducible) {
         listaFavoritos.add(contenidoReproducible);
         contenidoReproducible.esFavorito();
