@@ -8,21 +8,14 @@ public class Usuario  {
     // Implementamos los metodos particulares de usuarios
     public void  agregarFavorito(ContenidoReproducible contenidoReproducible) {
         listaFavoritos.add(contenidoReproducible);
-        contenidoReproducible.esFavorito();
-        // PREGUNTAR A DANNY
+        // FALTA QUE ACTUALICE EL ESTADO DE ESFAVORITO, NO SE COMO TRAERLO
     }
 
-
-    // Mostrar a Danny a ver que tal
     public void descargarContenido(ContenidoDescargable contenidoDescargable) {
-        if (contenidoDescargable.verificarEspacioRequerido(espacioDisponible)) {
-            espacioDisponible = espacioDisponible - contenidoDescargable.descargar();
-        }else{
-            System.out.println("Espacio insuficiente");
-        }
+
     }
 
     public void reproducirContenido(ContenidoReproducible contenidoReproducible) {
-        contenidoReproducible.reproducir();
+
     }
 }
