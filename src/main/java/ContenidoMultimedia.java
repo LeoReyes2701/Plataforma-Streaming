@@ -13,10 +13,12 @@ public abstract class ContenidoMultimedia implements ContenidoReproducible{
     protected void registrarInteraccion() {
     }
 
-    //Implementamos un getter para vecesReproducido pq es private
+    // Aca van los getters
+    public String getTitulo() {return titulo;}
     public int getVecesReproducido() {
         return vecesReproducido;
     }
+
 
     // Implementamos los metodos de la inteface
     @Override
