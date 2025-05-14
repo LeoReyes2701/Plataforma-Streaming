@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class PlataformaStreaming {
     private String nombrePlataforma;
@@ -9,8 +11,22 @@ public class PlataformaStreaming {
 
     // Preguntar al profe por el this, y como interpretar los parametros
     public PlataformaStreaming(List<ContenidoMultimedia> contenidosPlataforma, List<Usuario> listaUsuarios) {
+        if (contenidosPlataforma == null) {
+            System.out.println("No se puede ingresar la plataforma");
+            // Seria mejor hacer esto con ecepciones
+        }
+
+        if (listaUsuarios == null) {
+            System.out.println("No se puede ingresar la usuario");
+        }
+
         this.contenidosPlataforma = contenidosPlataforma;
         this.listaUsuarios = listaUsuarios;
+    }
+
+    public PlataformaStreaming() {
+        this.contenidosPlataforma = new ArrayList<>();
+        this.listaUsuarios = new ArrayList<>();
     }
 
     public void agregarContenido(ContenidoMultimedia contenidoMultimedia) {
@@ -34,6 +50,17 @@ public class PlataformaStreaming {
         }
         return contenidoMasPopular;
     }
+/**
+    public ContenidoMultimedia obtenerContenidoMasPopular2(){
+        Optional<ContenidoMultimedia> resultado = contenidosPlataforma.stream().max(Comparator.comparingDouble(ContenidoMultimedia::calcularPuntuacion)
+        );
+        return resultado.orElse(null);
+    }
+
+    public static void printContenido(ContenidoMultimedia contenido){
+        System.out.println(contenido);
+    }
+ ... */
 
     public List<ContenidoMultimedia> buscarPorGenero(String genero){
         List<ContenidoMultimedia> contenidosPorGenero = new ArrayList<>(); // Esto es para crear un array vacio
